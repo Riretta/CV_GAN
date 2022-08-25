@@ -1,6 +1,6 @@
 # CV_GAN
 Image Generation with Capsule Vector-VAE<br>
-This repository implement the work presented in: [CVGAN: Image Generation with Capsule Vector-VAE](https://link.springer.com/chapter/10.1007/978-3-031-06427-2_45)
+This repository implement the work presented in: [CVGAN: Image Generation with Capsule Vector-VAE](https://link.springer.com/chapter/10.1007/978-3-031-06427-2_45)<br>
 We propose <b>Capsule Vector - VAE(CV-VAE)</b>, a new model based on VQ-VAE architecture where the <em>discrete bottleneck</em> represented by the quantization code-book
 is replaced with a capsules layer. 
 We demonstrate that the capsules can be successfully applied for the clusterization procedure reintroducing the differentiability of the bottleneck in the model. 
