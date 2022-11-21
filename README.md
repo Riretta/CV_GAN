@@ -15,3 +15,18 @@ This has practical benefits, for instance, in unsupervised representation learni
 We present results on ImageNet, COCOStuff, and FFHQ datasets, and we compared the obtained images with results with VQGAN. 
 
 This repository is based on the [Taming Transformers for High-Resolution Image Synthesis](https://compvis.github.io/taming-transformers/)
+How to make it work:
+1) Download and install the repository (https://compvis.github.io/taming-transformers/)
+2) Substitute the original file with the files in this repository 
+3) the dataset in this case is ImageNet. If you want to use another dataset follow the Data Preparation istruction in taming transformers repository.
+5) python main.py --base configs/imagenet_vcgan.yaml -t True --gpus 0
+
+if you use our work: please cite us in your publications:
+@inproceedings{pucci2022cvgan,
+  title={CVGAN: Image Generation with Capsule Vector-VAE},
+  author={Pucci, Rita and Micheloni, Christian and Foresti, Gian Luca and Martinel, Niki},
+  booktitle={International Conference on Image Analysis and Processing},
+  pages={536--547},
+  year={2022},
+  organization={Springer}
+}
