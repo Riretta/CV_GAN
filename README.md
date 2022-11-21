@@ -21,7 +21,7 @@ How to make it work:
 3) The model is going to be trained on ImageNet. If you want to use another dataset follow the Data Preparation istruction in taming transformers repository.
 5) python main.py --base configs/imagenet_vcgan.yaml -t True --gpus 0
 
-if you need the trained model send an issue to the me 👩‍🦱
+if you need the trained model send an issue to the me 👩‍🦱 (the project was developed at [@machine-learning-and-perception-lab](https://machinelearning.uniud.it/))
 
 if you use our work: please cite us in your publications:
 @inproceedings{pucci2022cvgan,
