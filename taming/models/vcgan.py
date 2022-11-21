@@ -30,8 +30,7 @@ class VQModel(pl.LightningModule):
         self.digitcaps = DigitCaps(ddconfig["z_channels"])
         self.decoder = Decoder(**ddconfig)
         self.loss = instantiate_from_config(lossconfig)
-        # self.quantize = VectorQuantizer(n_embed, embed_dim, beta=0.25,
-        #                                 remap=remap, sane_index_shape=sane_index_shape)
+        
         self.quant_conv = torch.nn.Conv2d(ddconfig["z_channels"], embed_dim, 1)
         self.post_quant_conv = torch.nn.Conv2d(embed_dim, ddconfig["z_channels"], 1)
         if ckpt_path is not None:
@@ -62,12 +61,8 @@ class VQModel(pl.LightningModule):
         _, d = self.digitcaps(c)
         # print("Quant DIGIT OUTPUT SIZE ->>>>>>>", d.size())
         quant = self.quant_conv(d)
-        # print("Quant CONV OUTPUT SIZE ->>>>>>>", d.size())
-        # quant, emb_loss, info = self.quantize(h)
-        # print("ENCODING Quantization QUANT SIZE ->>>>>>>", quant.size())
-        # print("ENCODING Quantization emb_loss ->>>>>>>",emb_loss)
-        # print("ENCODING Quantization info ->>>>>>>", info)
-        return quant, torch.Tensor([0.0]),None#, emb_loss, info
+
+        return quant, torch.Tensor([0.0]),None
 
     def decode(self, quant):
         quant = self.post_quant_conv(quant)
