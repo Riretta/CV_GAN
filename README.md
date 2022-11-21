@@ -17,9 +17,11 @@ We present results on ImageNet, COCOStuff, and FFHQ datasets, and we compared th
 This repository is based on the [Taming Transformers for High-Resolution Image Synthesis](https://compvis.github.io/taming-transformers/)
 How to make it work:
 1) Download and install the repository (https://compvis.github.io/taming-transformers/)
-2) Substitute the original file with the files in this repository 
-3) the dataset in this case is ImageNet. If you want to use another dataset follow the Data Preparation istruction in taming transformers repository.
+2) Substitute the original files with the files in this repository 
+3) The model is going to be trained on ImageNet. If you want to use another dataset follow the Data Preparation istruction in taming transformers repository.
 5) python main.py --base configs/imagenet_vcgan.yaml -t True --gpus 0
+
+if you need the trained model send an issue to the me 👩‍🦱
 
 if you use our work: please cite us in your publications:
 @inproceedings{pucci2022cvgan,
